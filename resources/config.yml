@@ -1,21 +1,32 @@
 default:
-  min: 25
-  max: 32
+  min: 7
+  max: 31
+  current: 0
 cold:
   min: -10
   max: 5
+  current: 0
 hot:
   min: 33
   max: 50
+  current: 0
 murder-snow:
   min: -50
   max: -5
+  current: 0
 nether:
   min: 49
   max: 80
-scorched-earth:   # Maybe time-based
+  current: 0
+scorched-earth:
   min: -10
   max: 60
+  current: 0
 end:
-  min: -70        #Friking Cold
+  min: -70
   max: -30
+  current: 0
+curruption:
+  min: -35
+  max: 120
+  current: 0
