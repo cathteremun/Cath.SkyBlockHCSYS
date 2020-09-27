@@ -23,21 +23,27 @@ class GradiusTask extends Task {
                 if($temp > 38) { //medium overheat
                     if($temp > 50) { //strong overheat
                         ChangeTemp::setStats($player, 3, 1);
+                        return;
                     }
                     ChangeTemp::setStats($player, 2, 1);
+                    return;
                 }
                 ChangeTemp::setStats($player, 1, 1);
+                return;
             } else if($temp < 5) { //light freeze
                 if($temp < -15) { //medium freeze
                     if($temp < -30) { //strong freeze
                         ChangeTemp::setStats($player, 3, -1);
+                        return;
                     }
                     ChangeTemp::setStats($player, 2, -1);
+                    return;
                 }
                 ChangeTemp::setStats($player, 1, -1);
+                return;
             } else {
                 ChangeTemp::setStats($player, 1, 0);
-                //Remove Stats by 1 FE
+                return;
             }
         }
     }
